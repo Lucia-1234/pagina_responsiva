@@ -21,20 +21,23 @@ body {
 .header {
   width: 100%;
   height: 15vh;
+  position: relative;
   background-color: #ff7700;
   display: inline-block;
 }
 
 .header h1 {
   margin-top: 3vh;
-  margin-left: 5vh;
+  margin-left: 40px;
   font-size: 3em;
   display: inline-block;
 }
 
 .busqueda {
-  width: 40vh;
-  margin-left: 50%;
+  width: 80vh;
+  margin-top: 35px;
+  margin-left: 30vw;
+  position: absolute;
   background-color: #f3a44a;
   border: 1px solid white;
   border-radius: 29px;
@@ -48,9 +51,9 @@ body {
 
 .registro {
   display: inline-block;
-  margin-top: 2vh;
-  text-align: center;
-  padding-bottom: 5px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 70vw;
 }
 
 .registro p {
@@ -62,25 +65,23 @@ body {
   width: 5vh;
   height: 5vh;
   float: right;
-  margin-left: -10vh;
-
 }
 
 .img_principal {
-  margin-top: 5vh;
-  margin-left: 7vh;
+  margin-top: 24px;
+  margin-left: 300px;
 }
 
 .img_principal img {
-  width: 70%;
-  height: 50vh;
+  width: 40%;
+  height: 40vh;
   float: left;
   margin-right: 15vh;
 }
 
 .menu {
   width: 20%;
-  height: 50vh;
+  height: 40vh;
   background-color: #f3a44a;
   display: inline-block;
 }
@@ -102,7 +103,7 @@ body {
 
 .casera {
   display: inline-block;
-  margin-left: var(--margen_izquierdo);
+  margin-left: 10%;
   text-align: center;
   font-family: var(--fuente);
   font-size: var(--tamaño)
@@ -148,7 +149,7 @@ body {
   width: 15vh;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1024px) {
 
   .header {
     height: 20vh;
@@ -159,12 +160,12 @@ body {
   }
 
   .busqueda {
-    width: 40vh;
-    margin-left: 45%;
+    width: 30vh;
+    margin-left: 50px;
   }
 
   .img_principal img {
-    width: 60%;
+    width: 30vw;
   }
 
   .casera {
@@ -184,7 +185,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 921px) {
 
   .header {
     height: 15vh;
@@ -197,7 +198,8 @@ body {
   .busqueda {
     width: 50vh;
     height: 4vh;
-    margin-left: 5vh;
+    margin-left: 4vh;
+    margin-top: 12px;
   }
 
   .busqueda img {
@@ -206,19 +208,19 @@ body {
   }
 
   .registro {
-    float: right;
-    margin-right: 3vh;
+    position: absolute;
+    right: 34px;
+    margin-top: -20px;
   }
 
   .img_principal {
-    width: 60vh;
-    margin-left: 3vh;
+    width: 80vw;
+    margin-left: 86px;
   }
 
   .img_principal img {
-    width: 70%;
-    height: 40vh;
-    margin-right: 3vh;
+    height: 35vh;
+    margin-bottom: 12px;
   }
 
   .menu {
@@ -239,70 +241,107 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width:760px) {
   .header {
-    height: 10vh;
+    height: 15vh;
+  }
+
+  .busqueda {
+    width: 70vw;
+    height: 5vh;
+    margin-top: 15px;
+  }
+
+  .busqueda img {
+    margin: 6px;
+    width: 20px;
+  }
+
+  .registro {
+    margin-left: 110px;
+  }
+
+  .img_principal {
+    width: 300vw;
+    margin-left: 86px;
+  }
+
+  .img_principal img {
+    height: 70vh;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (max-width: 460px) {
+  .header {
+    height: 15vh;
   }
 
   .header h1 {
     font-size: 2em;
-    margin-left: 1vh;
+    margin-left: 8vw;
     display: inline-block;
   }
 
   .busqueda {
-    width: 15vh;
-    height: 2vh;
-    margin-left: 10%;
-    display: inline-block;
+    width: 50vw;
+    height: 3vh;
+    margin-top: 10px;
+    display: block;
   }
 
   .busqueda img {
-    margin: 1px;
-    width: 15px;
+    margin: 3px;
+    width: 12px;
   }
 
   .registro {
     display: inline-block;
+    margin-left: 90px;
+    margin-top: 30px;
   }
 
   .registro p {
-    font-size: 10px;
+    font-size: 11px;
+    font-family: var(--fuente);
     margin-right: 2vh;
   }
 
   .perfil img {
-    width: 2vh;
-    height: 2vh;
+    width: 5vw;
+    height: 4vh;
     float: right;
-    margin-left: -8vh;
+    position: absolute;
+    left: 11vh;
+
   }
 
   .img_principal {
-    width: 50vh;
-    margin-left: 3vh;
+    width: 78vw;
+    margin-left: 86px;
   }
 
   .img_principal img {
-    width: 50%;
-    height: 20vh;
-    float: left;
-    margin-right: 2vh;
+    height: 25vh;
+    margin-bottom: 12px;
   }
 
   .menu {
-    width: 30%;
-    height: 20vh;
-    display: inline-block;
+    width: 55vw;
+    height: 40vh;
+    padding: 15px;
+    margin-left: 85px;
+    margin-bottom: 30px;
   }
 
   .menu h2 {
-    font-size: 1vh;
+    font-size: 15px;
   }
 
   .menu p {
-    font-size: 1vh;
-    margin-left: 1vh;
+    font-size: 12px;
+    text-align: center;
   }
 
   .casera {
