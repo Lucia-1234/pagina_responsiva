@@ -1,28 +1,28 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Reinicio general para evitar problemas de espaciado */
 }
 
 :root {
   --fuente: Verdana, Geneva, Tahoma, sans-serif;
   --tamaño: 3vh;
-  --margen_izquierdo: 12%;
+  --margen_izquierdo: 9%;
   --responsivo_img: 10vh;
   --responsivo_Letra: 2vh;
   --espacio_imagenes: 1vh;
-  --izquierdo_lap: 10%;
+  --izquierdo_lap: 80px; /* Variable reservada para posible uso en laptops */
 }
 
 body {
-  background-color: #fff5aa;
+  background-color: #fff5aa; /* Fondo amarillo claro para un aspecto más cálido */
 }
 
 .header {
   width: 100%;
   height: 15vh;
   position: relative;
-  background-color: #ff7700;
+  background-color: #ff7700; /* Color naranja fuerte para destacar el encabezado */
   display: inline-block;
 }
 
@@ -30,30 +30,30 @@ body {
   margin-top: 3vh;
   margin-left: 40px;
   font-size: 3em;
-  display: inline-block;
+  display: inline-block; /* El título se coloca al lado de la barra de búsqueda */
 }
 
 .busqueda {
   width: 80vh;
   margin-top: 35px;
-  margin-left: 30vw;
+  margin-left: 250px;
   position: absolute;
-  background-color: #f3a44a;
+  background-color: #f3a44a; /* Fondo más claro que el encabezado */
   border: 1px solid white;
-  border-radius: 29px;
+  border-radius: 29px; /* Bordes redondeados para suavizar el diseño */
   display: inline-block;
 }
 
 .busqueda img {
   margin: 1vh;
-  margin-left: 5vh;
+  margin-left: 5vh; /* Imagen dentro del campo de búsqueda con separación a la izquierda */
 }
 
 .registro {
   display: inline-block;
   position: absolute;
   margin-top: 35px;
-  margin-left: 70vw;
+  margin-left: 70vw; /* Se coloca a la derecha del encabezado */
 }
 
 .registro p {
@@ -64,26 +64,26 @@ body {
 .perfil img {
   width: 5vh;
   height: 5vh;
-  float: right;
+  float: right; /* Imagen de perfil alineada a la derecha */
 }
 
 .img_principal {
   margin-top: 24px;
-  margin-left: 300px;
+  margin-left: 300px; /* Separación izquierda para centrar contenido */
 }
 
 .img_principal img {
   width: 40%;
   height: 40vh;
-  float: left;
-  margin-right: 15vh;
+  float: left; /* Imagen principal alineada a la izquierda */
+  margin-right: 15vh; /* Espacio entre la imagen y el contenido siguiente */
 }
 
 .menu {
   width: 20%;
   height: 40vh;
   background-color: #f3a44a;
-  display: inline-block;
+  display: inline-block; /* Menú lateral en columna */
 }
 
 .menu h2 {
@@ -101,72 +101,87 @@ body {
   font-family: var(--fuente);
 }
 
+/* Sección de comida casera */
 .casera {
   display: inline-block;
   margin-left: 10%;
   text-align: center;
   font-family: var(--fuente);
-  font-size: var(--tamaño)
+  font-size: var(--tamaño);
 }
 
 .casera img {
-  width: 30vh;
+  width: 30vh; /* Imagen más grande que las otras categorías */
 }
 
+/* Sección de comida típica */
 .tipica {
   display: inline-block;
   margin-left: var(--margen_izquierdo);
   text-align: center;
   font-family: var(--fuente);
-  font-size: var(--tamaño)
+  font-size: var(--tamaño);
 }
 
 .tipica img {
   width: 20vh;
 }
 
+/* Sección de comida de mar */
 .mar {
   display: inline-block;
   margin-left: var(--margen_izquierdo);
   text-align: center;
   font-family: var(--fuente);
-  font-size: var(--tamaño)
+  font-size: var(--tamaño);
 }
 
 .mar img {
   width: 20vh;
 }
 
+/* Sección de postres */
 .postres {
   display: inline-block;
   margin-left: var(--margen_izquierdo);
   text-align: center;
   font-family: var(--fuente);
-  font-size: var(--tamaño)
+  font-size: var(--tamaño);
 }
 
 .postres img {
-  width: 15vh;
+  width: 15vh; /* Imagen más pequeña para postres */
 }
+
 
 @media (max-width:1024px) {
 
   .header {
-    height: 20vh;
+    height: 20vh; /* Aumento la altura del header para pantallas más pequeñas */
   }
 
   .header h1 {
-    display: inline-block;
+    display: inline-block; /* Mantengo el título en línea dentro del header */
   }
 
   .busqueda {
-    width: 30vh;
-    margin-left: 50px;
+    width: 50vh; /* Reduzco el ancho de la barra de búsqueda */
+    margin-left: 300px; /* Ajusto su posición para que siga centrada en resoluciones menores */
+  }
+
+  .registro {
+    margin-left: 640px; /* Muevo el registro un poco más a la izquierda para que quepa en pantalla */
+  }
+
+  .img_principal {
+    margin-left: 230px; /* Reduzco el margen izquierdo de la imagen principal */
   }
 
   .img_principal img {
-    width: 30vw;
+    width: 30vw; /* Cambio el ancho a vw para que sea más flexible con el tamaño de la ventana */
   }
+
+  /* Ajusto el margen izquierdo de todas las secciones de comida para adaptarlas al nuevo tamaño */
 
   .casera {
     margin-left: var(--izquierdo_lap);
@@ -185,125 +200,125 @@ body {
   }
 }
 
+
 @media (max-width: 921px) {
 
   .header {
-    height: 15vh;
+    height: 15vh; /* Reduzco la altura del header para esta resolución */
   }
 
   .header h1 {
-    display: block;
+    display: block; /* Hago que el título se muestre en bloque para que ocupe toda la línea */
   }
 
   .busqueda {
     width: 50vh;
-    height: 4vh;
-    margin-left: 4vh;
-    margin-top: 12px;
+    height: 4vh; /* Ajusto altura para que se vea más delgada */
+    margin-left: 4vh; /* Centro la barra de búsqueda hacia la izquierda */
+    margin-top: 12px; /* Separación superior menor para que todo encaje mejor */
   }
 
   .busqueda img {
     margin: 5px;
-    width: 20px;
+    width: 20px; /* Reduzco tamaño del ícono dentro de la barra */
   }
 
   .registro {
     position: absolute;
-    right: 34px;
-    margin-top: -20px;
+    right: 34px; /* Coloco el texto de registro a la derecha */
+    margin-top: -20px; /* Subo ligeramente el texto para alinearlo mejor con la barra */
   }
 
   .img_principal {
-    width: 80vw;
-    margin-left: 86px;
+    margin-left: 106px; /* Ajusto el margen izquierdo para centrar la imagen en este tamaño */
   }
 
   .img_principal img {
     height: 35vh;
+    width: 70vw; /* Aumento el ancho proporcionalmente para que la imagen ocupe más espacio horizontal */
     margin-bottom: 12px;
   }
 
   .menu {
-    width: 30vh;
+    width: 50vh;
     height: 40vh;
-    display: inline-block;
+    padding: 12px;
+    margin-left: 130px; /* Centro el menú horizontalmente */
+    margin-bottom: 30px; /* Espacio inferior para que no choque con otros elementos */
   }
 
   .menu p {
-    font-size: 0.8em;
-    margin-left: 1vh;
-    font-size: 1em;
+    font-size: 0.8em; /* Ajusto texto para que sea más que antes */
   }
-
-  .postres {
-    margin-left: 25%;
-  }
-
 }
 
 @media (max-width:760px) {
+
   .header {
-    height: 15vh;
+    height: 15vh; /* Mantengo la altura del header para que se vea equilibrado en pantallas pequeñas */
   }
 
   .busqueda {
-    width: 70vw;
-    height: 5vh;
-    margin-top: 15px;
+    width: 70vw; /* Aumento el ancho de la barra de búsqueda para que se ajuste mejor en pantallas más angostas */
+    height: 5vh; /* Le doy un poco más de altura para que se vea proporcionada */
+    margin-top: 15px; /* Espacio arriba para separarla del borde del header */
   }
 
   .busqueda img {
-    margin: 6px;
-    width: 20px;
+    margin: 6px; /* Espacio alrededor del ícono */
+    width: 20px; /* Tamaño reducido del ícono para que encaje bien en la barra */
   }
 
   .registro {
-    margin-left: 110px;
+    margin-left: 110px; /* Cambio la posición del texto de registro hacia la izquierda */
   }
 
   .img_principal {
-    width: 300vw;
-    margin-left: 86px;
+    margin-left: 86px; /* Ajusto el margen izquierdo para centrar la imagen en esta resolución */
   }
 
   .img_principal img {
-    height: 70vh;
-    margin-bottom: 12px;
+    height: 70vh; /* Hago la imagen principal más alta para que destaque */
+    width: 30vh; /* Le doy un ancho proporcional para que mantenga su forma vertical */
+    margin-bottom: 12px; /* Espacio debajo de la imagen para separar de otros elementos */
   }
 
 }
 
+
+
 @media (max-width: 460px) {
+
   .header {
-    height: 15vh;
+    height: 15vh; /* Mantengo la altura del header compacta para móviles */
   }
 
   .header h1 {
-    font-size: 2em;
-    margin-left: 8vw;
+    font-size: 2em; /* Reduzco el tamaño del título para que no se desborde */
+    margin-left: 8vw; /* Lo desplazo un poco a la derecha */
     display: inline-block;
   }
 
   .busqueda {
-    width: 50vw;
-    height: 3vh;
+    width: 50vw; /* Hago más estrecha la barra de búsqueda */
+    height: 3vh; /* Más delgada para ahorrar espacio vertical */
     margin-top: 10px;
-    display: block;
+    display: block; /* Acomodo como bloque para evitar problemas de alineación */
   }
 
   .busqueda img {
     margin: 3px;
-    width: 12px;
+    width: 12px; /* Ícono más pequeño dentro de la barra */
   }
 
   .registro {
     display: inline-block;
-    margin-left: 90px;
-    margin-top: 30px;
+    margin-left: 90px; /* Ajusto la posición horizontal */
+    margin-top: 30px; /* Lo bajo un poco para que quede alineado visualmente */
   }
 
   .registro p {
-    font-size: 11px;
+    font-size: 11px; /* Texto más pequeño para pantallas pequeñas */
     font-family: var(--fuente);
     margin-right: 2vh;
   }
@@ -313,17 +328,16 @@ body {
     height: 4vh;
     float: right;
     position: absolute;
-    left: 11vh;
-
+    left: 11vh; /* Posiciono el ícono del perfil más hacia la izquierda */
   }
 
   .img_principal {
     width: 78vw;
-    margin-left: 86px;
+    margin-left: 86px; /* Centrada aproximadamente en pantallas muy pequeñas */
   }
 
   .img_principal img {
-    height: 25vh;
+    height: 25vh; /* Imagen más baja para no ocupar mucho espacio */
     margin-bottom: 12px;
   }
 
@@ -331,23 +345,23 @@ body {
     width: 55vw;
     height: 40vh;
     padding: 15px;
-    margin-left: 85px;
+    margin-left: 85px; /* Centrado del menú */
     margin-bottom: 30px;
   }
 
   .menu h2 {
-    font-size: 15px;
+    font-size: 15px; /* Título del menú más pequeño */
   }
 
   .menu p {
     font-size: 12px;
-    text-align: center;
+    text-align: center; /* Centrado del texto en cada opción del menú */
   }
 
   .casera {
-    font-size: var(--responsivo_Letra);
+    font-size: var(--responsivo_Letra); /* Letra más chica para adaptar el texto */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrado automático horizontalmente */
   }
 
   .tipica {
@@ -369,11 +383,11 @@ body {
   }
 
   .casera img {
-    width: 15vh;
+    width: 15vh; /* Imagen más pequeña para móviles */
   }
 
   .tipica img {
-    width: var(--responsivo_img);
+    width: var(--responsivo_img); /* Uso la variable para mantener proporción */
   }
 
   .mar img {
@@ -383,4 +397,5 @@ body {
   .postres img {
     width: var(--responsivo_img);
   }
+
 }
