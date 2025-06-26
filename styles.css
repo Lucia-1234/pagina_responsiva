@@ -274,13 +274,16 @@ body {
   }
 
   .img_principal {
-    margin-left: 86px; /* Ajusto el margen izquierdo para centrar la imagen en esta resolución */
+    /* margin-left: 86px; Ajusto el margen izquierdo para centrar la imagen en esta resolución */
+    width: 500px;
+    margin: 0 auto;
   }
 
   .img_principal img {
-    height: 70vh; /* Hago la imagen principal más alta para que destaque */
-    width: 30vh; /* Le doy un ancho proporcional para que mantenga su forma vertical */
-    margin-bottom: 12px; /* Espacio debajo de la imagen para separar de otros elementos */
+    height: 40vh; /* Hago la imagen principal más alta para que destaque */
+    width: 100%; /* Le doy un ancho proporcional para que mantenga su forma vertical */
+    /* margin-bottom: 12px Espacio debajo de la imagen para separar de otros elementos */
+    margin-top: 20px;
   }
 
 }
