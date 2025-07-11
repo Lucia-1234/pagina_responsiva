@@ -26,14 +26,14 @@ body {
   display: inline-block;
 }
 
-.header h1 {
+.header__titulo {
   margin-top: 3vh;
   margin-left: 40px;
   font-size: 3em;
   display: inline-block; /* El título se coloca al lado de la barra de búsqueda */
 }
 
-.busqueda {
+.header__busqueda {
   width: 80vh;
   margin-top: 35px;
   margin-left: 250px;
@@ -44,7 +44,7 @@ body {
   display: inline-block;
 }
 
-.busqueda img {
+.header__Lupa {
   margin: 1vh;
   margin-left: 5vh; /* Imagen dentro del campo de búsqueda con separación a la izquierda */
 }
@@ -56,23 +56,23 @@ body {
   margin-left: 70vw; /* Se coloca a la derecha del encabezado */
 }
 
-.registro p {
+.registro__text {
   margin-right: 6vh;
   font-size: 1em;
 }
 
-.perfil img {
+.registro__perfil {
   width: 5vh;
   height: 5vh;
   float: right; /* Imagen de perfil alineada a la derecha */
 }
 
-.img_principal {
+.portada {
   margin-top: 24px;
   margin-left: 300px; /* Separación izquierda para centrar contenido */
 }
 
-.img_principal img {
+.portada__img {
   width: 40%;
   height: 40vh;
   float: left; /* Imagen principal alineada a la izquierda */
@@ -86,7 +86,7 @@ body {
   display: inline-block; /* Menú lateral en columna */
 }
 
-.menu h2 {
+.menu__titulo {
   text-align: center;
   padding: 1vh;
   margin-top: 1vh;
@@ -95,10 +95,21 @@ body {
   font-family: var(--fuente);
 }
 
-.menu p {
+.menu__item {
   margin-left: 4vh;
-  font-size: 2vh;
+  font-size: 15px;
   font-family: var(--fuente);
+}
+
+.menu__button{
+  margin: 8px;
+  font-size: 15px;
+  font-family: var(--fuente);
+  border: none;
+  background-color: #ff7700;
+  width: 90px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* Sección de comida casera */
@@ -110,7 +121,7 @@ body {
   font-size: var(--tamaño);
 }
 
-.casera img {
+.casera__img {
   width: 30vh; /* Imagen más grande que las otras categorías */
 }
 
@@ -123,7 +134,7 @@ body {
   font-size: var(--tamaño);
 }
 
-.tipica img {
+.tipica__img {
   width: 20vh;
 }
 
@@ -136,7 +147,7 @@ body {
   font-size: var(--tamaño);
 }
 
-.mar img {
+.mar__img {
   width: 20vh;
 }
 
@@ -149,7 +160,7 @@ body {
   font-size: var(--tamaño);
 }
 
-.postres img {
+.postres__img {
   width: 15vh; /* Imagen más pequeña para postres */
 }
 
@@ -160,11 +171,11 @@ body {
     height: 20vh; /* Aumento la altura del header para pantallas más pequeñas */
   }
 
-  .header h1 {
+  .header__titulo {
     display: inline-block; /* Mantengo el título en línea dentro del header */
   }
 
-  .busqueda {
+  .header__busqueda {
     width: 50vh; /* Reduzco el ancho de la barra de búsqueda */
     margin-left: 300px; /* Ajusto su posición para que siga centrada en resoluciones menores */
   }
@@ -173,11 +184,11 @@ body {
     margin-left: 640px; /* Muevo el registro un poco más a la izquierda para que quepa en pantalla */
   }
 
-  .img_principal {
+  .portada {
     margin-left: 230px; /* Reduzco el margen izquierdo de la imagen principal */
   }
 
-  .img_principal img {
+  .portada__img {
     width: 30vw; /* Cambio el ancho a vw para que sea más flexible con el tamaño de la ventana */
   }
 
@@ -207,33 +218,33 @@ body {
     height: 15vh; /* Reduzco la altura del header para esta resolución */
   }
 
-  .header h1 {
+  .header__titulo {
     display: block; /* Hago que el título se muestre en bloque para que ocupe toda la línea */
   }
 
-  .busqueda {
+  .header__busqueda {
     width: 50vh;
     height: 4vh; /* Ajusto altura para que se vea más delgada */
     margin-left: 4vh; /* Centro la barra de búsqueda hacia la izquierda */
     margin-top: 12px; /* Separación superior menor para que todo encaje mejor */
   }
 
-  .busqueda img {
+  .header__Lupa {
     margin: 5px;
     width: 20px; /* Reduzco tamaño del ícono dentro de la barra */
   }
 
-  .registro {
+  .header__registro {
     position: absolute;
     right: 34px; /* Coloco el texto de registro a la derecha */
     margin-top: -20px; /* Subo ligeramente el texto para alinearlo mejor con la barra */
   }
 
-  .img_principal {
+  .portada {
     margin-left: 106px; /* Ajusto el margen izquierdo para centrar la imagen en este tamaño */
   }
 
-  .img_principal img {
+  .portada__img {
     height: 35vh;
     width: 70vw; /* Aumento el ancho proporcionalmente para que la imagen ocupe más espacio horizontal */
     margin-bottom: 12px;
@@ -247,7 +258,7 @@ body {
     margin-bottom: 30px; /* Espacio inferior para que no choque con otros elementos */
   }
 
-  .menu p {
+  .menu__item {
     font-size: 0.8em; /* Ajusto texto para que sea más que antes */
   }
 }
@@ -264,22 +275,22 @@ body {
     margin-top: 15px; /* Espacio arriba para separarla del borde del header */
   }
 
-  .busqueda img {
+  .header__busqueda img {
     margin: 6px; /* Espacio alrededor del ícono */
     width: 20px; /* Tamaño reducido del ícono para que encaje bien en la barra */
   }
 
-  .registro {
+  .header__registro {
     margin-left: 110px; /* Cambio la posición del texto de registro hacia la izquierda */
   }
 
-  .img_principal {
+  .portada {
     /* margin-left: 86px; Ajusto el margen izquierdo para centrar la imagen en esta resolución */
     width: 500px;
     margin: 0 auto;
   }
 
-  .img_principal img {
+  .portada__img {
     height: 40vh; /* Hago la imagen principal más alta para que destaque */
     width: 100%; /* Le doy un ancho proporcional para que mantenga su forma vertical */
     /* margin-bottom: 12px Espacio debajo de la imagen para separar de otros elementos */
@@ -296,37 +307,37 @@ body {
     height: 15vh; /* Mantengo la altura del header compacta para móviles */
   }
 
-  .header h1 {
+  .header__titulo {
     font-size: 2em; /* Reduzco el tamaño del título para que no se desborde */
     margin-left: 8vw; /* Lo desplazo un poco a la derecha */
     display: inline-block;
   }
 
-  .busqueda {
+  .header__busqueda {
     width: 50vw; /* Hago más estrecha la barra de búsqueda */
     height: 3vh; /* Más delgada para ahorrar espacio vertical */
     margin-top: 10px;
     display: block; /* Acomodo como bloque para evitar problemas de alineación */
   }
 
-  .busqueda img {
+  .header__Lupa {
     margin: 3px;
     width: 12px; /* Ícono más pequeño dentro de la barra */
   }
 
-  .registro {
+  .header__registro {
     display: inline-block;
     margin-left: 90px; /* Ajusto la posición horizontal */
     margin-top: 30px; /* Lo bajo un poco para que quede alineado visualmente */
   }
 
-  .registro p {
+  .registro__text{
     font-size: 11px; /* Texto más pequeño para pantallas pequeñas */
     font-family: var(--fuente);
     margin-right: 2vh;
   }
 
-  .perfil img {
+  .registro__perfil {
     width: 5vw;
     height: 4vh;
     float: right;
@@ -334,12 +345,12 @@ body {
     left: 11vh; /* Posiciono el ícono del perfil más hacia la izquierda */
   }
 
-  .img_principal {
+  .portada {
     width: 78vw;
     margin-left: 86px; /* Centrada aproximadamente en pantallas muy pequeñas */
   }
 
-  .img_principal img {
+  .portada__img {
     height: 25vh; /* Imagen más baja para no ocupar mucho espacio */
     margin-bottom: 12px;
   }
@@ -352,11 +363,11 @@ body {
     margin-bottom: 30px;
   }
 
-  .menu h2 {
+  .menu__titulo {
     font-size: 15px; /* Título del menú más pequeño */
   }
 
-  .menu p {
+  .menu__item {
     font-size: 12px;
     text-align: center; /* Centrado del texto en cada opción del menú */
   }
@@ -385,19 +396,19 @@ body {
     margin: 0 auto;
   }
 
-  .casera img {
+  .casera__img {
     width: 15vh; /* Imagen más pequeña para móviles */
   }
 
-  .tipica img {
+  .tipica__img {
     width: var(--responsivo_img); /* Uso la variable para mantener proporción */
   }
 
-  .mar img {
+  .mar__img {
     width: var(--responsivo_img);
   }
 
-  .postres img {
+  .postres__img {
     width: var(--responsivo_img);
   }
 
